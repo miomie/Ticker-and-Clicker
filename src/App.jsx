@@ -3,14 +3,14 @@ import Clicker from './components/Clicker';
 import Ticker from './components/Ticker';
 
 function App() {
-  const [buttonName, setButtonName] = useState('Клик');
+  const [buttonName, setButtonName] = useState('Кликнуть');
   const [showTicker, setShowTicker] = useState(true);
 
   function changeName() {
-    if (buttonName === 'Клик') {
-      setButtonName('Жми');
+    if (buttonName === 'Кликнуть') {
+      setButtonName('Нажать');
     } else {
-      setButtonName('Клик');
+      setButtonName('Кликнуть');
     }
   }
   function toggleTicker() {
