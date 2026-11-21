@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 
 function Ticker() {
   const [tick, setTick] = useState(0);
-  useEffect(function () {
-    const intervalId = setInterval(function () {
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
       console.log('тик');
-      setTick(function (prev) {
-        return prev + 1;
-      });
+      setTick((prev) => prev + 1);
     }, 1000);
-    return function () {
+
+    return () => {
       clearInterval(intervalId);
     };
   }, []);

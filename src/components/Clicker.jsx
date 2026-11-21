@@ -1,20 +1,18 @@
 import { useState, useEffect } from 'react';
 
-function Clicker(props) {
+function Clicker({ name }) {
   const [count, setCount] = useState(0);
-  useEffect(function () {
-    console.log('считаем: ' + props.name);
-  }, [props.name]);
-  function handleClick() {
-    setCount(count + 1);
-  }
+
+  useEffect(() => {
+    console.log('считаем: ' + name);
+  }, [name]);
 
   return (
     <button
-      onClick={handleClick}
+      onClick={() => setCount(count + 1)}
       className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-lg p-4 text-lg"
     >
-      {props.name}: {count}
+      {name}: {count}
     </button>
   );
 }
