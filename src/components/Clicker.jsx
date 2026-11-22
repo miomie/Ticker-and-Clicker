@@ -5,7 +5,7 @@ function Clicker({ name }) {
 
   useEffect(() => {
     console.log('считаем: ' + name);
-  }, [name]);
+  }, [count]);
 
   return (
     <button
